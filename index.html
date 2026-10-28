@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cade Schering Portfolio</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #151515;
+    --muted: #6b6b6b;
+    --line: #e4e4e4;
+    --card: #f1f1f1;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111; --text: #f2f2f2; --muted: #9a9a9a; --line: #2a2a2a; --card: #1c1c1c; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 24px;
+    padding: 18px 5vw;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { font-weight: 600; letter-spacing: .02em; text-decoration: none; }
+  nav a { margin-left: 22px; text-decoration: none; font-size: .95rem; color: var(--muted); }
+  nav a:hover { color: var(--text); }
+  main { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 70px; }
+  h1, h2 { font-weight: 500; letter-spacing: -.01em; margin: 0 0 28px; }
+  h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+  h2 { font-size: 1.6rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+  .project { text-decoration: none; display: block; }
+  .thumb {
+    aspect-ratio: 4 / 3; background: var(--card); overflow: hidden; border-radius: 4px;
+  }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .project:hover .thumb img { transform: scale(1.04); }
+  .project .year { color: var(--muted); font-size: .85rem; margin-top: 12px; }
+  .project .title { font-size: 1.1rem; margin: 0; }
+  .about { max-width: 640px; color: var(--text); }
+  .contact-list { list-style: none; padding: 0; margin: 24px 0 0; }
+  .contact-list li { margin-bottom: 8px; }
+  .btn {
+    display: inline-block; padding: 12px 22px; border: 1px solid var(--text);
+    text-decoration: none; border-radius: 2px; margin-top: 8px;
+  }
+  .btn:hover { background: var(--text); color: var(--bg); }
+  footer { padding: 32px 5vw; text-align: center; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#top">Cade Schering</a>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#about">Contact + About</a>
+    <a href="#resume">Resume</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section id="projects">
+    <h1>Projects</h1>
+    <div class="grid">
+
+      <!-- Replace each href with a project page later, and put your image in an "images" folder. -->
+      <a class="project" href="#">
+        <div class="thumb"><img src="images/norman-cornerstone-theater.jpg" alt="Norman Cornerstone Theater" onerror="this.style.display='none'"></div>
+        <div class="year">2026</div>
+        <h3 class="title">Norman Cornerstone Theater</h3>
+      </a>
+
+      <a class="project" href="#">
+        <div class="thumb"><img src="images/puerto-rico-museum-library.jpg" alt="Puerto Rico Museum + Library" onerror="this.style.display='none'"></div>
+        <div class="year">2025</div>
+        <h3 class="title">Puerto Rico Museum + Library</h3>
+      </a>
+
+      <a class="project" href="#">
+        <div class="thumb"><img src="images/lake-thunderbird-boathouse.jpg" alt="Lake Thunderbird Boathouse" onerror="this.style.display='none'"></div>
+        <div class="year">2024</div>
+        <h3 class="title">Lake Thunderbird Boathouse</h3>
+      </a>
+
+      <a class="project" href="#">
+        <div class="thumb"><img src="images/new-york-photography.jpg" alt="New York Photography" onerror="this.style.display='none'"></div>
+        <div class="year">2025</div>
+        <h3 class="title">New York Photography</h3>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Contact + About</h2>
+    <p class="about">
+      I’m Cade, a designer based in Norman, Oklahoma. Write a few sentences about your background,
+      what you’re studying or working on, and what you’re looking for next.
+    </p>
+    <ul class="contact-list">
+      <li><a href="mailto:cadejs2003@gmail.com">cadejs2003@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/cadeschering" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://cade.ou.edu" target="_blank" rel="noopener">cade.ou.edu</a></li>
+    </ul>
+    <a class="btn" href="mailto:cadejs2003@gmail.com">Send me an email</a>
+  </section>
+
+  <section id="resume">
+    <h2>Resume + Portfolio Download</h2>
+    <!-- Upload resume.pdf and portfolio.pdf to the repo next to this file. -->
+    <a class="btn" href="resume.pdf">Download resume (PDF)</a>
+    <a class="btn" href="portfolio.pdf">Download portfolio (PDF)</a>
+  </section>
+
+</main>
+
+<footer>© 2026 Cade Schering</footer>
+
+</body>
+</html>
 
